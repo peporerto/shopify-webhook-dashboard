@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Orders Dashboard</title>
+</head>
+<body>
+  <h1>Últimas Órdenes</h1>
+  <table border="1">
+    <tr>
+      <th>Email</th>
+      <th>Total</th>
+      <th>Moneda</th>
+      <th>Fecha</th>
+    </tr>
+    <% orders.forEach(order => { %>
+      <tr>
+        <td><%= order.email %></td>
+        <td><%= order.totalPrice %></td>
+        <td><%= order.currency %></td>
+        <td><%= order.createdAt.toLocaleString() %></td>
+      </tr>
+    <% }) %>
+  </table>
+</body>
+</html>
